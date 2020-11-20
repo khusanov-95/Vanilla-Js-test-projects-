@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/62402d094c.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="screen">
+        <label for="location">Select location:</label>
+        <select name="location" id="location">
+          <option value="8">Lefkosa ...... ($8)</option>
+          <option value="10">Girne ....... ($10)</option>
+          <option value="12">Magosa ...... ($12)</option>
+          <option value="9">Lefke ........ ($9)</option>
+        </select>
+        <p class="select-text">Select seat:</p>
+        <ul>
+          <li>
+            <span>Free:</span>
+            <div class="seat"></div>
+          </li>
+          <li>
+            <span>Selected:</span>
+            <div class="seat selected"></div>
+          </li>
+          <li>
+            <span>Occupied:</span>
+            <div class="seat occupied"></div>
+          </li>
+        </ul>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="seat occupied"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+        </div>
+        <div class="row">
+          <div class="seat"></div>
+          <div class="seat occupied"></div>
+          <div class="seat occupied"></div>
+          <div class="seat"></div>
+        </div>
+        <div class="row">
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+        </div>
+        <div class="row">
+          <div class="seat occupied"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat occupied"></div>
+        </div>
+        <div class="row">
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+        </div>
+        <div class="row">
+          <div class="seat occupied"></div>
+          <div class="seat occupied"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+        </div>
+        <div class="row">
+          <div class="seat occupied"></div>
+          <div class="seat occupied"></div>
+          <div class="seat"></div>
+          <div class="seat"></div>
+        </div>
+      </div>
+      <p class="text">
+        You have selected <span id="count">0</span> seats for a total price of
+        $<span id="total">0</span>
+      </p>
+      <button class="btn">Procced with payment</button>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

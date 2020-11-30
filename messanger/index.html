@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/62402d094c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="auth" id="auth">
+        <div class="sign">
+          <div class="forms-headings"><a id="sign-up-link" class="signUp active"><h4>Sign up</h4></a>
+            <a id="log-in-link" class="logIn"><h4>Log-in</h4></a>
+          </div>    
+          <!-- Sign Up -->
+          <div class="sign-up active">
+            <form class="sign-up-form" id="sign-up-form">
+              <div class="input-field">
+                <label for="signup-email">Email:</label>
+                <input type="email" id="signupEmail" required>
+              </div>
+              <div class="input-field">
+                <label for="password">Password:</label>
+                <input type="password" id="signupPassword" required>
+              </div>
+              <div class="input-field">
+                <label for="nickname">Create your nickname:</label>
+                <input type="text" id="nickname" required>
+              </div>
+              <button class="btn-submit" type="submit">Sign-up</button>
+              <div class="err"></div>
+            </form>
+          </div>
+          <!-- Log In -->
+          <div class="log-in">
+            <form id="log-in-form">
+              <div class="input-field">
+                <label for="login-email">Email:</label>
+                <input type="email" id="loginEmail" required>
+              </div>
+              <div class="input-field">
+                <label for="password">Password:</label>
+                <input type="password" id="loginPassword" required>
+              </div>
+              <button class="btn-log-in" type="submit">Log-in</button>
+              <div class="err"></div>
+            </form>      
+          </div>
+        </div>
+      </div> 
+      <div class="messanger" id="messanger">
+        <div class="messanger__room-name"><button class="btn-back"><i class="fas fa-arrow-left"></i></button><h3>Room3</h3></div>
+        <div class="UserInfo">
+          <div><i class="far fa-user"></i> <span class="username" id="username"></span></div>
+          <div class="logout"><button class="logout-btn" id="logout">Log-out</button></div>
+        </div>
+        <div class="messanger__chat-area" id="chatArea"></div>
+        <div class="messanger__input">
+          <form class="messanger__form" id="form">
+            <input type="text" id="message">
+            <button type="submit" class="btn" id="sendBtn">Send</button>
+          </form>
+        </div>
+      </div>
+    </div>
+   
+<script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-firestore.js"></script>
+<script>
+  // web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCel4U2drF06P56TuRQpJrliJiMHC9z4Ow",
+    authDomain: "messenger-test-5370c.firebaseapp.com",
+    databaseURL: "https://messenger-test-5370c.firebaseio.com",
+    projectId: "messenger-test-5370c",
+    storageBucket: "messenger-test-5370c.appspot.com",
+    messagingSenderId: "665992591746",
+    appId: "1:665992591746:web:5eb9dd63ec96cabf6bf79b"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
+  //auth and firebase
+  const auth = firebase.auth();
+  const db = firebase.firestore();
+</script>
+<script src="http://cdn.date-fns.org/v1.9.0/date_fns.min.js"></script>
+<script src="app.js"></script>
+  </body>
+</html>
